@@ -1,1 +1,1 @@
-### Aim of the experiment
+Develop pneumatic circuit to operate indirect double acting cylinder
