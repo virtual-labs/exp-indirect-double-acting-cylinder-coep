@@ -224,10 +224,28 @@ goForAnimation_Direct_DAC = function(){
 	$("#mainDiv").html(renderForAnimationDirSACHtm);
 	
 	var obj = {};
-	var paper = new Raphael(document.getElementById('diagram'), '100%', 620);
+	//var paper = new Raphael(document.getElementById('diagram'), '100%', 620);
+	
+	var w = 900;
+	var h = 500;
+	
+	var width = $(window).width();
+	
+	  if ($(window).width() < 500) {
+		    width = $(this).width();
+		    paper = new Raphael(document.getElementById('canvas'), '100%', 500);
+		paper.setViewBox(0,0,w,h,true);
+		paper.setSize('100%', 500);
+	  }else
+	  {
+	      paper = new Raphael(document.getElementById('canvas'), '100%', 900);
+		paper.setViewBox(0,0,w,h,true);
+		paper.setSize('100%', 900);
+	  }
+	
 	
 	x = 150;
-	y = 50;
+	y = -100;
 	time = 1000;
 	status = 0;
 	
@@ -739,10 +757,27 @@ goForAnimation_Indirect_DAC = function(){
 	$("#mainDiv").html(renderForAnimationDirSACHtm);
 	
 	var obj = {};
-	var paper = new Raphael(document.getElementById('diagram'), '100%', 620);
+	//var paper = new Raphael(document.getElementById('diagram'), '100%', 620);
+	
+	var w = 900;
+	var h = 500;
+	
+	var width = $(window).width();
+	
+	  if ($(window).width() < 500) {
+		    width = $(this).width();
+		    paper = new Raphael(document.getElementById('diagram'), '100%', 500);
+		paper.setViewBox(0,0,w,h,true);
+		paper.setSize('100%', 500);
+	  }else
+	  {
+	      paper = new Raphael(document.getElementById('diagram'), '100%', 900);
+		paper.setViewBox(0,0,w,h,true);
+		paper.setSize('100%', 900);
+	  }
 	
 	x = 150;
-	y = 50;
+	y = -100;
 	
 	drawValve = function(){
 //		3/2 left Valve
